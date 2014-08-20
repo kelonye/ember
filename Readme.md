@@ -10,6 +10,15 @@ Usage
   require('ember');
 ```
 
+Upgrading
+---
+
+Append the following to `handlebars.js`:
+
+```javascript
+module.exports = window.Handlebars = Handlebars;
+```
+
 Example
 ---
 

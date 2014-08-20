@@ -1,7 +1,8 @@
-component = ./node_modules/component-hooks/node_modules/.bin/component
+component = ./node_modules/.bin/component
 
-public: node_modules components lib/index.js lib/ember.js lib/handlebars.js
-	@$(component) build -n $@ -o $@
+public: node_modules components $(shell find lib -type f)
+	$(component) build -n $@ -o $@
+	@touch $@
 
 node_modules:
 	@npm install
@@ -9,16 +10,8 @@ node_modules:
 components:
 	@$(component) install
 
-lib/ember.js:
-	@axel -o $@ http://builds.emberjs.com/tags/v1.2.0/ember.js
-
-lib/handlebars.js:
-	@axel -o $@ http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.1.2.js
-
 example: public
 	@xdg-open example/index.html
 
-clean:
-	@rm -rf public lib/ember.js lib/handlebars.js
 
-.PHONY: clean example
+.PHONY: example

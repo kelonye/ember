@@ -1,8 +1,7 @@
 {
   "name": "ember",
-  "version": "1.2.0",
-  "license": "MIT",
+  "private": true,
   "dependencies": {
-    "component-hooks": "*"
+    "component": "0.19.9"
   }
 }
