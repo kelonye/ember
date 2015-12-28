@@ -2,6 +2,6 @@
   "name": "ember",
   "private": true,
   "dependencies": {
-    "component-hooks": "^0.3.2"
+    "component-hooks": "^0.3.3"
   }
 }
