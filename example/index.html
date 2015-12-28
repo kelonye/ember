@@ -2,17 +2,5 @@
 <html>
   <body>
     <script src='../public/public.js'></script>
-    <script data-template-name='index' type='text/x-handlebars'>
-      {{model}}
-    </script>
-    <script type='text/javascript'>
-      require('ember');
-      App = Em.Application.create();
-      App.IndexRoute = Em.Route.extend({
-        model: function(){
-          return 'Hello';
-        }
-      });
-    </script>
   </body>
 </html>

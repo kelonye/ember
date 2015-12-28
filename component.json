@@ -7,7 +7,6 @@
   "main": "lib/index.js",
   "scripts": [
     "lib/index.js",
-    "lib/ember.js",
-    "lib/ember-template-compiler.js"
+    "lib/ember.js"
   ]
 }
